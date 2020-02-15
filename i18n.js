@@ -27,6 +27,10 @@ const languages = [
         "code": "de"
     },
     {
+        "name": "Español",
+        "code": "es"
+    },
+    {
         "name": "korean",
         "code": "ko"
     }
@@ -48,114 +52,136 @@ const i18n = {
     // quiz.html
     "quiz-loading": {
         "de": "Laden…",
-        "ko": "로딩중..."
+        "ko": "로딩중...",
+        "es": "Cargando..."
     },
     "quiz-strongly-agree": {
         "en": "Strongly Agree",
         "de": "Stimme voll zu",
-        "ko": "매우 동의"        
+        "ko": "매우 동의",
+        "es": "Muy de acuerdo"
     },
     "quiz-agree": {
         "en": "Agree",
         "de": "Stimme zu",
-        "ko": "동의"
+        "ko": "동의",
+        "es": "Algo de acuerdo"
     },
     "quiz-neutral": {
         "en": "Neutral/Unsure",
         "de": "Neutral/Unsicher",
-        "ko": "중립/잘 모름"
+        "ko": "중립/잘 모름",
+        "es": "Neutro/Inseguro"
     },
     "quiz-disagree": {
         "en": "Disagree",
         "de": "Stimme nicht zu",
-        "ko": "동의하지 않음"
+        "ko": "동의하지 않음",
+        "es": "Algo en desacuerdo"
     },
     "quiz-strongly-disagree": {
         "en": "Strongly Disagree",
         "de": "Stimme überhaupt nicht zu",
-        "ko": "결코 동의하지 않음"
+        "ko": "결코 동의하지 않음",
+        "es": "Muy en desacuerdo"
     },
     "quiz-back": {
         "de": "back",
         "de": "Zurück",
-        "ko": "뒤로"
+        "ko": "뒤로",
+        "es": "atras"
     },
     "quiz-question-of": {
         en(qn, questions) {return `Question ${qn + 1} of ${questions.length}`},
         de(qn, questions) {return `Frage ${qn +1} von ${questions.length}`},
-        ko(qn, questions) {return `${questions.length}개 질문 중 ${qn +1} 번째`}
+        ko(qn, questions) {return `${questions.length}개 질문 중 ${qn +1} 번째`},
+        es(qn, questions) {return `Pregunta ${qn +1} de ${questions.length}`}
     },
     // instructions.html
     "inst-h2": {
         "en": "Instructions",
         "de": "Instruktionen",
-        "ko": "소개"
+        "ko": "소개",
+        "es": "Instrucciones"
     },
     "inst-p": {
         "en": "You will be presented with a series of statements. For each one, click the button with your opinion on it.",
         "de": "Sie erhalten eine Reihe von Stellungnahmen. Klicken Sie jeweils auf die Schaltfläche mit Ihrer Meinung dazu.",
-        "ko": "당신은 일련의 질문들을 받게 될 것입니다. 해당되는 답변을 클릭하세요."
+        "ko": "당신은 일련의 질문들을 받게 될 것입니다. 해당되는 답변을 클릭하세요.",
+        "es": "Vas a ser presentado con una serie de afirmaciones. Para cada una, apriete el botón con tu opinion en ello."
     },
     "inst-gotit": {
         "en": "Got it!",
         "de": "Verstanden",
-        "ko": "알겠습니다"
+        "ko": "알겠습니다",
+        "es": "Entendido!"
     },
     "inst-nvm": {
         "en": "Wait, nevermind!",
         "de": "Warte, vergiss es!",
-        "ko": "그만둘래요."
+        "ko": "그만둘래요.",
+        "es": "Espera, no importa"
     },
     // results.html
     "result-h1": {
         "en": "Results",
         "de": "Ergebnisse",
-        "ko": "결과"
+        "ko": "결과",
+        "es": "Resultados"
     },
     "result-url": {
         "en": "<br>You can send these results by copying and pasting the URL at the top of the page or using the image below.",
         "de": "<br>Sie können diese Ergebnisse senden, indem Sie die URL oben auf der Seite kopieren und einfügen oder das folgende Bild verwenden.",
-        "ko": "<br>당신은 상단의 URL을 복사하거나 아래 이미지를 이용해 설문 결과를 공유할 수 있습니다."
+        "ko": "<br>당신은 상단의 URL을 복사하거나 아래 이미지를 이용해 설문 결과를 공유할 수 있습니다.",
+        "es": "<br>Puedes mandar estos resultados copiando la URL en la cima de la pagina o usando la imagen de abajo."
     },
     "result-h2-match": {
         "en": "Closest Match: <span class='weight-300' id='ideology-label'> </span>",
         "de": "Höchste Übereinstimmung: <span class='weight-300' id='ideology-label'> </span>",
         "ko": `가장 일치하는 성향: <span class="weight-300" id="ideology-label"> </span>`,
+        "es": "Resultado más cercano: <span class='weight-300' id='ideology-label'> </span>"
     },
     "result-h2-next-matches": {
         "en": "Next closest matches",
         "de": "Nächst höchste Überstimmungen",
-        "ko": "다음으로 일치하는 성향"
+        "ko": "다음으로 일치하는 성향",
+        "es": "Próximos resultados más cercanos"
     },
     "next-matches-percent": {
         "en": "With your closest match as 100% and farthest as 0%, here is how closely you matched the other ideologies.",
         "de": "Hier sind die Ideologien mit denen du am meisten übereinstimmst, wo volle Übereinstimmung 100% ist und keine 0%.",
-        "ko": "당신과 가장 일치하는 성향을 100%로, 가장 일치하지 않는 성향을 0%로 둘 때, 아래 사상들은 당신의 성향에 가까운 다른 다른 사상들 입니다."
+        "ko": "당신과 가장 일치하는 성향을 100%로, 가장 일치하지 않는 성향을 0%로 둘 때, 아래 사상들은 당신의 성향에 가까운 다른 다른 사상들 입니다.",
+        "es": "Aquí esta la cercanía a otras ideologías de tu resultado, el más próximo siendo 100% y el menos 0%"
     },
     "result-h2-score": {
         "en": "I don't like my scores!",
         "de": "Ich mag meine Ergebnisse nicht",
-        "ko": "제 결과가 마음에 들지 않습니다."
+        "ko": "제 결과가 마음에 들지 않습니다.",
+        "es": "No me gustan mis resultados!"
     },
     "result-issues": {
         "en": "Please remember that you are not intended to get a 100% score in any of the categories. The point of the quiz is to challenge your views. If you have any suggestions or constructive criticism please fill out this <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>short form</a> or open an issue on the <a href='https://github.com/LeftValues/leftvalues.github.io'>GitHub Page</a>.",
         "de": "Bitte denken Sie daran, dass Sie in keiner der Kategorien eine 100%-ige Punktzahl erzielen möchten. Ziel des Quiz ist es, Ihre Ansichten zu hinterfragen. Wenn Sie Anregungen oder konstruktive Kritik haben, füllen Sie bitte dieses <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>Kurzformular</a> aus oder öffnen Sie ein Problem auf der <a href='https://github.com/LeftValues/leftvalues.github.io'>GitHub-Seite</a>.",
-        "ko": `어떠한 범주에서든 100%의 점수를 얻을 수 없다는 것을 기억하십시오. 이 설문의 목적은 당신 자신의 관점에 직면하는 것에 있습니다. 의견이나 건설적인 비판은 <a href="https://forms.gle/6WZYMb5GXkkDLhxr5">이 양식</a>이나 <a href="https://github.com/LeftValues/leftvalues.github.io">GitHub Page</a>의 이슈를 통해 개진할 수 있습니다.`
+        "ko": `어떠한 범주에서든 100%의 점수를 얻을 수 없다는 것을 기억하십시오. 이 설문의 목적은 당신 자신의 관점에 직면하는 것에 있습니다. 의견이나 건설적인 비판은 <a href="https://forms.gle/6WZYMb5GXkkDLhxr5">이 양식</a>이나 <a href="https://github.com/LeftValues/leftvalues.github.io">GitHub Page</a>의 이슈를 통해 개진할 수 있습니다.`,
+        "es": "Note que no se pretende conseguir 100% en cualquier categoría. El objetivo del cuestionario es para retar tus creencias. Si teneis alguna sugerencia o criticismo constructivo, por favor rellenad este <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>corto formulario</a> o abran una cuestión en la <a href='https://github.com/LeftValues/leftvalues.github.io'>Página de GitHub</a>."
     },
     "result-a-label": {
         "en": ["Extremely Revolutionary","Very Revolutionary","Revolutionary","Neutral","Reformist","Very Reformist","Extremely Reformist"],
         "de": ["Extrem Revolutionär", "Sehr Revolutionär", "Revolutionär", "Neutral", "Reformistisch", "Sehr Reformistisch", "Extrem Reformistisch"],
-        "ko": ["극단적 혁명주의","강경한 혁명주의","혁명주의","중립","개혁주의","강경한 개혁주의","극단적 개혁주의"]
+        "ko": ["극단적 혁명주의","강경한 혁명주의","혁명주의","중립","개혁주의","강경한 개혁주의","극단적 개혁주의"],
+        "es": ["Extremadamente Revolutionario","Muy Revolutionario","Revolutionario","Neutral","Reformista","Muy Reformista","Extremadamente Reformista"]
     },
     "result-b-label": {
         "en": ["Extremely Scientific","Very Scientific","Scientific","Neutral","Utopian","Very Utopian","Extremely Utopian"],
         "de": ["Extrem Wissenschaftlich", "Sehr Wissenschaftlich", "Wissenschaftlich", "Neutral", "Utopisch", "Sehr Utopisch", "Extrem Utopisch"],
-        "ko": ["극단적 과학주의","강경한 과학주의","과학주의","중립","공상주의","강경한 공상주의","극단적 공상주의"]
+        "ko": ["극단적 과학주의","강경한 과학주의","과학주의","중립","공상주의","강경한 공상주의","극단적 공상주의"],
+        "es": ["Extremadamente Cientifico","Muy Cientifico","Sientifico","Neutro","Utópico","Muy Utópico","Extremadamente Utópico"]
     },
     "result-c-label": {
         "en": ["Extremely Centralist","Very Centralist","Centralist","Neutral","Decentralist","Very Decentralist","Extremely Decentralist"],
         "de": ["Extrem Zentralisiert", "Sehr Zentralisiert", "Zentralisiert", "Neutral", "Dezentralisiert", "Sehr Dezentralisiert", "Extrem Dezentralisiert"],
-        "ko": ["극단적 중앙집권주의", "강경한 중앙집권주의", "중앙집권주의", "중립", "분권주의", "강경한 분권주의", "극단적 분권주의"]
+        "ko": ["극단적 중앙집권주의", "강경한 중앙집권주의", "중앙집권주의", "중립", "분권주의", "강경한 분권주의", "극단적 분권주의"],
+        "es": ["Extremadamente centralista","Muy Centralista","Centralista","Neutral","Desentralista","Muy Desentralizta","Extremadamente Decentralizta]
     },
     "result-d-label": {
         "en": ["Extremely Internationalist","Very Internationalist","Internationalist","Neutral","Nationalist","Very Nationalist","Extremely Nationalist"],
