@@ -27,6 +27,10 @@ const languages = [
         "code": "de"
     },
     {
+        "name": "Español",
+        "code": "es"
+    },
+    {
         "name": "korean",
         "code": "ko"
     }
@@ -48,150 +52,179 @@ const i18n = {
     // quiz.html
     "quiz-loading": {
         "de": "Laden…",
-        "ko": "로딩중..."
+        "ko": "로딩중...",
+        "es": "Cargando..."
     },
     "quiz-strongly-agree": {
         "en": "Strongly Agree",
         "de": "Stimme voll zu",
-        "ko": "매우 동의"        
+        "ko": "매우 동의",
+        "es": "Muy de acuerdo"
     },
     "quiz-agree": {
         "en": "Agree",
         "de": "Stimme zu",
-        "ko": "동의"
+        "ko": "동의",
+        "es": "Algo de acuerdo"
     },
     "quiz-neutral": {
         "en": "Neutral/Unsure",
         "de": "Neutral/Unsicher",
-        "ko": "중립/잘 모름"
+        "ko": "중립/잘 모름",
+        "es": "Neutro/Inseguro"
     },
     "quiz-disagree": {
         "en": "Disagree",
         "de": "Stimme nicht zu",
-        "ko": "동의하지 않음"
+        "ko": "동의하지 않음",
+        "es": "Algo en desacuerdo"
     },
     "quiz-strongly-disagree": {
         "en": "Strongly Disagree",
         "de": "Stimme überhaupt nicht zu",
-        "ko": "결코 동의하지 않음"
+        "ko": "결코 동의하지 않음",
+        "es": "Muy en desacuerdo"
     },
     "quiz-back": {
         "de": "back",
         "de": "Zurück",
-        "ko": "뒤로"
+        "ko": "뒤로",
+        "es": "atras"
     },
     "quiz-question-of": {
         en(qn, questions) {return `Question ${qn + 1} of ${questions.length}`},
         de(qn, questions) {return `Frage ${qn +1} von ${questions.length}`},
-        ko(qn, questions) {return `${questions.length}개 질문 중 ${qn +1} 번째`}
+        ko(qn, questions) {return `${questions.length}개 질문 중 ${qn +1} 번째`},
+        es(qn, questions) {return `Pregunta ${qn +1} de ${questions.length}`}
     },
     // instructions.html
     "inst-h2": {
         "en": "Instructions",
         "de": "Instruktionen",
-        "ko": "소개"
+        "ko": "소개",
+        "es": "Instrucciones"
     },
     "inst-p": {
         "en": "You will be presented with a series of statements. For each one, click the button with your opinion on it.",
         "de": "Sie erhalten eine Reihe von Stellungnahmen. Klicken Sie jeweils auf die Schaltfläche mit Ihrer Meinung dazu.",
-        "ko": "당신은 일련의 질문들을 받게 될 것입니다. 해당되는 답변을 클릭하세요."
+        "ko": "당신은 일련의 질문들을 받게 될 것입니다. 해당되는 답변을 클릭하세요.",
+        "es": "Vas a ser presentado con una serie de afirmaciones. Para cada una, apriete el botón con tu opinion en ello."
     },
     "inst-gotit": {
         "en": "Got it!",
         "de": "Verstanden",
-        "ko": "알겠습니다"
+        "ko": "알겠습니다",
+        "es": "Entendido!"
     },
     "inst-nvm": {
         "en": "Wait, nevermind!",
         "de": "Warte, vergiss es!",
-        "ko": "그만둘래요."
+        "ko": "그만둘래요.",
+        "es": "Espera, no importa"
     },
     // results.html
     "result-h1": {
         "en": "Results",
         "de": "Ergebnisse",
-        "ko": "결과"
+        "ko": "결과",
+        "es": "Resultados"
     },
     "result-url": {
         "en": "<br>You can send these results by copying and pasting the URL at the top of the page or using the image below.",
         "de": "<br>Sie können diese Ergebnisse senden, indem Sie die URL oben auf der Seite kopieren und einfügen oder das folgende Bild verwenden.",
-        "ko": "<br>당신은 상단의 URL을 복사하거나 아래 이미지를 이용해 설문 결과를 공유할 수 있습니다."
+        "ko": "<br>당신은 상단의 URL을 복사하거나 아래 이미지를 이용해 설문 결과를 공유할 수 있습니다.",
+        "es": "<br>Puedes mandar estos resultados copiando la URL en la cima de la pagina o usando la imagen de abajo."
     },
     "result-h2-match": {
         "en": "Closest Match: <span class='weight-300' id='ideology-label'> </span>",
         "de": "Höchste Übereinstimmung: <span class='weight-300' id='ideology-label'> </span>",
         "ko": `가장 일치하는 성향: <span class="weight-300" id="ideology-label"> </span>`,
+        "es": "Resultado más cercano: <span class='weight-300' id='ideology-label'> </span>"
     },
     "result-h2-next-matches": {
         "en": "Next closest matches",
         "de": "Nächst höchste Überstimmungen",
-        "ko": "다음으로 일치하는 성향"
+        "ko": "다음으로 일치하는 성향",
+        "es": "Próximos resultados más cercanos"
     },
     "next-matches-percent": {
         "en": "With your closest match as 100% and farthest as 0%, here is how closely you matched the other ideologies.",
         "de": "Hier sind die Ideologien mit denen du am meisten übereinstimmst, wo volle Übereinstimmung 100% ist und keine 0%.",
-        "ko": "당신과 가장 일치하는 성향을 100%로, 가장 일치하지 않는 성향을 0%로 둘 때, 아래 사상들은 당신의 성향에 가까운 다른 다른 사상들 입니다."
+        "ko": "당신과 가장 일치하는 성향을 100%로, 가장 일치하지 않는 성향을 0%로 둘 때, 아래 사상들은 당신의 성향에 가까운 다른 다른 사상들 입니다.",
+        "es": "Aquí esta la cercanía a otras ideologías de tu resultado, el más próximo siendo 100% y el menos 0%"
     },
     "result-h2-score": {
         "en": "I don't like my scores!",
         "de": "Ich mag meine Ergebnisse nicht",
-        "ko": "제 결과가 마음에 들지 않습니다."
+        "ko": "제 결과가 마음에 들지 않습니다.",
+        "es": "No me gustan mis resultados!"
     },
     "result-issues": {
         "en": "Please remember that you are not intended to get a 100% score in any of the categories. The point of the quiz is to challenge your views. If you have any suggestions or constructive criticism please fill out this <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>short form</a> or open an issue on the <a href='https://github.com/LeftValues/leftvalues.github.io'>GitHub Page</a>.",
         "de": "Bitte denken Sie daran, dass Sie in keiner der Kategorien eine 100%-ige Punktzahl erzielen möchten. Ziel des Quiz ist es, Ihre Ansichten zu hinterfragen. Wenn Sie Anregungen oder konstruktive Kritik haben, füllen Sie bitte dieses <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>Kurzformular</a> aus oder öffnen Sie ein Problem auf der <a href='https://github.com/LeftValues/leftvalues.github.io'>GitHub-Seite</a>.",
-        "ko": `어떠한 범주에서든 100%의 점수를 얻을 수 없다는 것을 기억하십시오. 이 설문의 목적은 당신 자신의 관점에 직면하는 것에 있습니다. 의견이나 건설적인 비판은 <a href="https://forms.gle/6WZYMb5GXkkDLhxr5">이 양식</a>이나 <a href="https://github.com/LeftValues/leftvalues.github.io">GitHub Page</a>의 이슈를 통해 개진할 수 있습니다.`
+        "ko": `어떠한 범주에서든 100%의 점수를 얻을 수 없다는 것을 기억하십시오. 이 설문의 목적은 당신 자신의 관점에 직면하는 것에 있습니다. 의견이나 건설적인 비판은 <a href="https://forms.gle/6WZYMb5GXkkDLhxr5">이 양식</a>이나 <a href="https://github.com/LeftValues/leftvalues.github.io">GitHub Page</a>의 이슈를 통해 개진할 수 있습니다.`,
+        "es": "Note que no se pretende conseguir 100% en cualquier categoría. El objetivo del cuestionario es para retar tus creencias. Si teneis alguna sugerencia o criticismo constructivo, por favor rellenad este <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>corto formulario</a> o abran una cuestión en la <a href='https://github.com/LeftValues/leftvalues.github.io'>Página de GitHub</a>."
     },
     "result-a-label": {
         "en": ["Extremely Revolutionary","Very Revolutionary","Revolutionary","Neutral","Reformist","Very Reformist","Extremely Reformist"],
         "de": ["Extrem Revolutionär", "Sehr Revolutionär", "Revolutionär", "Neutral", "Reformistisch", "Sehr Reformistisch", "Extrem Reformistisch"],
-        "ko": ["극단적 혁명주의","강경한 혁명주의","혁명주의","중립","개혁주의","강경한 개혁주의","극단적 개혁주의"]
+        "ko": ["극단적 혁명주의","강경한 혁명주의","혁명주의","중립","개혁주의","강경한 개혁주의","극단적 개혁주의"],
+        "es": ["Extremadamente Revolutionario","Muy Revolutionario","Revolutionario","Neutral","Reformista","Muy Reformista","Extremadamente Reformista"]
     },
     "result-b-label": {
         "en": ["Extremely Scientific","Very Scientific","Scientific","Neutral","Utopian","Very Utopian","Extremely Utopian"],
         "de": ["Extrem Wissenschaftlich", "Sehr Wissenschaftlich", "Wissenschaftlich", "Neutral", "Utopisch", "Sehr Utopisch", "Extrem Utopisch"],
-        "ko": ["극단적 과학주의","강경한 과학주의","과학주의","중립","공상주의","강경한 공상주의","극단적 공상주의"]
+        "ko": ["극단적 과학주의","강경한 과학주의","과학주의","중립","공상주의","강경한 공상주의","극단적 공상주의"],
+        "es": ["Extremadamente Cientifico","Muy Cientifico","Sientifico","Neutro","Utópico","Muy Utópico","Extremadamente Utópico"]
     },
     "result-c-label": {
         "en": ["Extremely Centralist","Very Centralist","Centralist","Neutral","Decentralist","Very Decentralist","Extremely Decentralist"],
         "de": ["Extrem Zentralisiert", "Sehr Zentralisiert", "Zentralisiert", "Neutral", "Dezentralisiert", "Sehr Dezentralisiert", "Extrem Dezentralisiert"],
-        "ko": ["극단적 중앙집권주의", "강경한 중앙집권주의", "중앙집권주의", "중립", "분권주의", "강경한 분권주의", "극단적 분권주의"]
+        "ko": ["극단적 중앙집권주의", "강경한 중앙집권주의", "중앙집권주의", "중립", "분권주의", "강경한 분권주의", "극단적 분권주의"],
+        "es": ["Extremadamente centralista","Muy Centralista","Centralista","Neutral","Desentralista","Muy Desentralizta","Extremadamente Decentralizta]
     },
     "result-d-label": {
         "en": ["Extremely Internationalist","Very Internationalist","Internationalist","Neutral","Nationalist","Very Nationalist","Extremely Nationalist"],
         "de": ["Extrem Internationalistisch", "Sehr Internationalistisch", "Internationalistisch", "Neutral", "Nationalistisch", "Sehr Nationalistisch", "Extrem Nationalistisch"],
-        "ko": ["극단적 세계주의","강경한 세계주의","세계주의","중립","국가주의","강경한 국가주의","극단적 국가주의"]
+        "ko": ["극단적 세계주의","강경한 세계주의","세계주의","중립","국가주의","강경한 국가주의","극단적 국가주의"],
+        "es": ["Extremadamente Internacionalista","Muy Internacionalista","Internacionalista","Neutral","Nacionalista","Muy Nacionalista", "Extremadamente Nacionalista"]
     },
     "result-e-label": {
         "en": ["Extremely Partisan","Very Partisan","Partisan","Neutral","Unionist","Very Unionist","Extremely Unionist"],
         "de": ["Extrem Parteiisch", "Sehr Parteiisch", "Parteiisch", "Neutral", "Gewerkschaftlich", "Sehr Gewerkschaftlich", "Extrem Gewerkschaftlich"],
-        "ko": ["극단적 정당주의", "강경한 정당주의", "정당주의", "중립", "조합주의", "강경한 조합주의", "극단적 조합주의"]
+        "ko": ["극단적 정당주의", "강경한 정당주의", "정당주의", "중립", "조합주의", "강경한 조합주의", "극단적 조합주의"],
+        "es":["Extremadamente Partisano","Muy Partisano","Partisano","Neutral","Unionista","Muy Unionista","Extremadamente Unionista"]
     },
     "result-f-label": {
         "en": ["Extremely Productivist","Very Productivist","Productivist","Neutral","Ecological","Very Ecological","Extremely Ecological"],
         "de": ["Extrem Produktivist", "Sehr Produktivist", "Produktivist", "Neutral", "Ökologisch", "Sehr Ökologisch", "Extrem Ökologisch"],
-        "ko": ["극단적 생산주의", "강경한 생산주의", "생산주의", "중립", "생태주의", "강경한 생태주의", "극단적 생태주의"]
+        "ko": ["극단적 생산주의", "강경한 생산주의", "생산주의", "중립", "생태주의", "강경한 생태주의", "극단적 생태주의"],
+        "es": ["Extremadamente Productivista","Muy Productivista","Productivista","Neutral","Ecologico","Muy Ecologico","Extremadamente Ecologico"]
     },
     "result-g-label": {
         "en": ["Extremely Conservative","Very Conservative","Conservative","Neutral","Progressive","Very Progressive","Extremely Progressive"],
         "de": ["Extrem Konservativ", "Sehr Konservativ", "Konservativ", "Neutral", "Progressiv", "Sehr Progressiv", "Extrem Progressiv"],
-        "ko": ["극단적 보수주의", "강경한 보수주의", "보수주의", "중립", "진보주의", "강경한 진보주의", "극단적 진보주의"]
+        "ko": ["극단적 보수주의", "강경한 보수주의", "보수주의", "중립", "진보주의", "강경한 진보주의", "극단적 진보주의"],
+        "es": ["Extremadamente Conservador","Muy Conservador","Conservador","Neutral","Progressisvo","Muy Progressisvo","Extremadamente Progressisvo"]
     },
     "result-back": {
         "en": "Back",
         "de": "Zurück",
-        "ko": "뒤로"
+        "ko": "뒤로",
+        "es": "Atras"
     },
     // index.html
     "index-b-start": {
         "en": "Click here to start!",
         "de": "Klicke hier um anzufangen!",
-        "ko": "클릭해서 시작하기!"
+        "ko": "클릭해서 시작하기!",
+        "es":"Aprieta aquí para empezar!"
     },
     "index-h2-whatis" : {
         "en": "What is LeftValues?",
         "de": "Was ist LeftValues?",
-        "ko": "LeftValues가 무엇입니까?"
+        "ko": "LeftValues가 무엇입니까?",
+        "es":"¿Que es LeftValues?"
     },
     "index-p-answer": {
         "en": "LeftValues is a leftist quiz inspired by and based upon the <a href='https://8values.github.io/'>8values</a> quiz that seeks to identify your position on the left-wing spectrum. " + 
@@ -204,17 +237,22 @@ const i18n = {
         각 문항을 살펴보고 <b>매우 동의함</b>과 <b>결코 동의하지 않음</b> 사이의 답변을 선택하면, 각각의 답변이 당신의 점수에 조금씩 영향을 주게 될 것입니다.
         각 축에 해당하는 문항은 순서대로 표시됩니다.
         설문 마지막에 당신의 답변에 기초한 점수가 각각의 가치(values)가 가질 수 있는 최댓값에 대한 백분율로 표시됩니다.
-        정직하게 답하십시오.<br/><br/> 이 설문에는 <b><u><span id="numOfQuestions"></span></u></b> 개의 문항이 있습니다.`
+        정직하게 답하십시오.<br/><br/> 이 설문에는 <b><u><span id="numOfQuestions"></span></u></b> 개의 문항이 있습니다.`,
+        "es":"LeftValues es una enquesta de izquierda inspirada y basada sobre la enquesta <a href='https://8values.github.io/'>8values</a> que intenta identificar tu posición en el espectro de ala izquierda. " +
+        "Si no eres de izquierda, esta enquesta obviamente no es apta para ti. Vas a ser presentado con una afirmación, y entonces vas a responder con tu opinión sobre esta, desde <b>Muy en desacuerdo</b> a <b>Muy de acuerdo</b>, con cada respuesta afectando tu resultado. Estas preguntas para cada eje esta representado en orden, en vez de dispersadas. Al final de la enquesta, tus respuestas van a ser comparadas con el máximo posible para cada valor, dandote un porcentaje. Responde sinceramente!<br/><br/>" +
+        "Hay <b><u><span id='numOfQuestions'></span></u></b> preguntas en la encuesta."
     },
     "index-h2-whatvalues": {
         "en": "What are the values?",
         "de": "Was sind die Werte?",
-        "ko": "가치(values)는 무엇입니까?"
+        "ko": "가치(values)는 무엇입니까?",
+        "es": "¿Quales son los valores?"
     },
     "index-sixaxes": {
         "en": "There are currently six axes, each of which has two opposing values. They are:",
         "de": "Derzeit gibt es sechs Achsen, von denen jede zwei entgegengesetzte Werte hat. Sie sind:",
-        "ko": "현재 6개의 축이 있습니다. 각각의 축은 아래와 같은 상반되는 두 개의 가치를 갖게 됩니다.:"
+        "ko": "현재 6개의 축이 있습니다. 각각의 축은 아래와 같은 상반되는 두 개의 가치를 갖게 됩니다.:",
+        "es": "Hay seis ejes, cada uno tiene dos valores opuestos. Estos son:"
     },
     "index-rev-desc": {
         "en": "<b style='color:#890000;'>Revolution</b> <b>vs.</b> <b style='color:#FC5959;'>Reform</b><br/>" +
@@ -222,59 +260,75 @@ const i18n = {
         "de": "<b style='color:#890000;'>Revolution</b> <b>vs.</b> <b style='color:#FC5959;'>Reform</b><br/>" +
         "Diejenigen mit einem höheren Revolutionswert unterstützen tendenziell einen radikalen und raschen Sturz des kapitalistischen Systems durch einen Massenaufstand. Diejenigen mit einem höheren Reformwert tendieren dazu, allmähliche Veränderungen in kapitalistischen Strukturen wie der liberalen Demokratie herbeizuführen, mit dem eventuellen Ziel des Sozialismus.",
         "ko": `<b style="color:#890000;">혁명</b> <b>vs.</b> <b style="color:#FC5959;">개혁</b><br/>
-        혁명 점수가 높은 사람들은 대중 봉기를 통한 자본주의체제의 급진적이고 빠른 전복을 지지하는 경향이 있습니다. 개혁 점수가 높은 사람들은 자유주의 민주주의와 같은 자본주의 구조 내에서 점진적으로 사회주의에 도달하려는 목표를 가지고 변화를 유도하는 경향이 있습니다.`
+        혁명 점수가 높은 사람들은 대중 봉기를 통한 자본주의체제의 급진적이고 빠른 전복을 지지하는 경향이 있습니다. 개혁 점수가 높은 사람들은 자유주의 민주주의와 같은 자본주의 구조 내에서 점진적으로 사회주의에 도달하려는 목표를 가지고 변화를 유도하는 경향이 있습니다.`,
+        "es": "<b style='color:#890000;'>Revolución</b> <b>vs.</b> <b style='color:#FC5959;'>Reforma</b><br/>" +
+        "Aquellos con una puntuación mayor en revolución tienden a soportar a radicales y un rapido derrocamiento del sistema capitalista mediante un levantamiento popular. Aquellos con una mayor puntuación en reforma tienden a favorar a introducir cambios graduales desde dentro de las estructuras capitalistas, como mediante democracia liberal, con el objetivo eventual de llegar al socialismo."
     },
     "index-sci-desc": {
         "en": "<b style='color:#88232B;'>Scientific</b> <b>vs.</b> <b style='color:#7F0037;'>Utopian</b><br/>" +
         "Those with a higher scientific score tend to support or sympathize with the Marxist analysis of society along the lines of dialectical materialism. Those with a higher utopian score tend to believe in a more idealistic analysis of society and reject materialist approaches.",
         "de": "<b style='color:#88232B;'>Wissenschaftlich</b> <b>vs.</b> <b style='color:#7F0037;'>Utopisch</b><br/>" +
         "Diejenigen mit einer höheren wissenschaftlichen Punktzahl neigen dazu, die marxistische Gesellschaftsanalyse im Sinne des dialektischen Materialismus zu unterstützen oder zu sympathisieren. Diejenigen mit einer höheren utopischen Bewertung neigen dazu, an eine idealistischere Analyse der Gesellschaft zu glauben und materialistische Ansätze abzulehnen.",
-        "ko": `<b style="color:#88232B;">과학주의</b> <b>vs.</b> <b style="color:#7F0037;">공상주의</b><br/> 과학주의 점수가 높은 사람들은 변증법적 유물론의 기준으로 사회에 대한 마르크스주의 분석을 지지하거나 공감하는 경향이 있습니다. 공상주의 점수가 높은 사람들은 사회에 대한 이상적인 분석을 믿고 물질주의적 접근을 거부하는 경향이 있습니다.`
+        "ko": `<b style="color:#88232B;">과학주의</b> <b>vs.</b> <b style="color:#7F0037;">공상주의</b><br/> 과학주의 점수가 높은 사람들은 변증법적 유물론의 기준으로 사회에 대한 마르크스주의 분석을 지지하거나 공감하는 경향이 있습니다. 공상주의 점수가 높은 사람들은 사회에 대한 이상적인 분석을 믿고 물질주의적 접근을 거부하는 경향이 있습니다.`,
+        "es": "<b style='color:#88232B;'>Científico</b> <b>vs.</b> <b style='color:#7F0037;'>Utópico</b><br/>" +
+        "Aquellos con una puntuación mayor científica tienden a soportar o simpatizar con el analisis marxísta de la sociedad con las líneas del materialismo dialéctico. Aquellos con una puntuación mayor en utópico tienden a creer en un analisis mas idealístico que rechaza las perspectivas maetrialistas."
     },
     "index-cent-desc": {
         "en": "<b style='color:#560000;'>Central</b> <b>vs.</b> <b style='color:#000000;'>Decentral</b><br/>" + 
         "Those with a higher central score tend to support an economic structure based around centralized national planning. Those with a higher decentral score tend to support an economic structure based around decentralized planning, usually on a more localized scale.",
         "de": "<b style='color:#560000;'>Zentralisiert</b> <b>vs.</b> <b style='color:#000000;'>Dezentralisiert</b><br/>" + 
         "Diejenigen mit einer höheren zentralen Punktzahl neigen dazu, eine Wirtschaftsstruktur zu unterstützen, die auf einer zentralisierten nationalen Planung beruht. Diejenigen mit einer höheren dezentralen Punktzahl neigen dazu, eine Wirtschaftsstruktur zu unterstützen, die auf einer dezentralen Planung beruht, normalerweise in einem lokaleren Maßstab.",
-        "ko": `<b style="color:#560000;">중앙집권주의</b> <b>vs.</b> <b style="color:#000000;">분권주의</b><br/> 중앙집권주의 점수가 높은 사람들은 중앙집중식 국가계획을 기반한 경제 구조를 지지하는 경향이 있습니다. 분권주의 점수가 높은 사람들은 분산계획을 중심으로 한 경제 구조를 지지하는 경향이 있습니다.`
+        "ko": `<b style="color:#560000;">중앙집권주의</b> <b>vs.</b> <b style="color:#000000;">분권주의</b><br/> 중앙집권주의 점수가 높은 사람들은 중앙집중식 국가계획을 기반한 경제 구조를 지지하는 경향이 있습니다. 분권주의 점수가 높은 사람들은 분산계획을 중심으로 한 경제 구조를 지지하는 경향이 있습니다.`,
+        "es": "<b style='color:#560000;'>Central</b> <b>vs.</b> <b style='color:#000000;'>Descentral</b><br/>" + 
+        "Aquellos con una puntuación mayor central tienden a soportar una estructura económica basada alrededor de una centralmente planificada. Aquellos con una puntuación mayor descentralizada tienden a soportar una estructura economica basada alrededor de planificación descentralizado, usualmente en una escala más local." 
     },
     "index-int-desc": {
         "en": "<b style='color:#782F52;'>International</b> <b>vs.</b> <b style='color:#7F3300;'>National</b><br/>" +
         "Those with a higher international score tend to support forming an international socialist movement, often with the eventual goal of abolishing nations. Those with a higher national score tend to prioritize building socialism within existing borders and reject the goal of a world socialist republic.",
         "de": "<b style='color:#782F52;'>International</b> <b>vs.</b> <b style='color:#7F3300;'>National</b><br/>" +
         "Diejenigen mit einer höheren internationalen Punktzahl neigen dazu, die Bildung einer internationalen sozialistischen Bewegung zu unterstützen, oft mit dem Ziel, Nationen abzuschaffen. Diejenigen mit einer höheren nationalen Punktzahl neigen dazu, den Aufbau des Sozialismus innerhalb der bestehenden Grenzen zu priorisieren und das Ziel einer sozialistischen Weltrepublik abzulehnen.",
-        "ko": `<b style="color:#782F52;">세계</b> <b>vs.</b> <b style="color:#7F3300;">국가</b><br/> 세계주의 점수가 높은 사람들은 종종 국가를 폐지하겠다는 궁극적 목표를 가지고 국제 사회주의 운동을 지원하는 경향이 있습니다. 높은 국가주의 점수를 받은 사람들은 기존 국경 내에서 사회주의 구축을 우선하고 국제 사회주의 공화국의 목표는 거부하는 경향이 있습니다.`
+        "ko": `<b style="color:#782F52;">세계</b> <b>vs.</b> <b style="color:#7F3300;">국가</b><br/> 세계주의 점수가 높은 사람들은 종종 국가를 폐지하겠다는 궁극적 목표를 가지고 국제 사회주의 운동을 지원하는 경향이 있습니다. 높은 국가주의 점수를 받은 사람들은 기존 국경 내에서 사회주의 구축을 우선하고 국제 사회주의 공화국의 목표는 거부하는 경향이 있습니다.`,
+        "es": "<b style='color:#782F52;'>Internacional</b> <b>vs.</b> <b style='color:#7F3300;'>Nacional</b><br/>" +
+        "Aquellos con una puntuación mayor internacional tienden a soportar la formación de un movimiento socialista internacional, a menudo con el objetivo eventual de abolir naciones. Aquellos con una puntuación mayor nacional tienden a priorizar a promover el socialismo desde dentro de bordes existentes y rechazan el objetivo de una republica socialista mundial."
     },
     "index-party-desc": {
         "en": "<b style='color:#963B33;'>Party</b> <b>vs.</b> <b style='color:#7F333B;'>Union</b><br/>" +
         "Those with a higher party score tend to favor using political parties as the basis of a socialist movement. Those with a higher union score tend to favor using trade unions and other forms of mass organization as a basis of a socialist movement. Being pro-party does not necessarily mean you oppose unions and vice versa, it is more about preference.",
         "de": "<b style='color:#963B33;'>Partei</b> <b>vs.</b> <b style='color:#7F333B;'>Gesellschaft</b><br/>" +
         "Diejenigen mit einer höheren Parteibewertung bevorzugen es, politische Parteien als Grundlage einer sozialistischen Bewegung zu verwenden. Diejenigen mit einer höheren Gewerkschaftsbewertung bevorzugen es, Gewerkschaften und andere Formen der Massenorganisation als Grundlage einer sozialistischen Bewegung zu verwenden. Partei bedeutet nicht unbedingt, dass Sie gegen Gewerkschaften sind und umgekehrt, es geht mehr um Präferenzen.",
-        "ko": `<b style="color:#963B33;">정당</b> <b>vs.</b> <b style="color:#7F333B;">조합</b><br/> 정당주의 점수가 높은 사람들은 정당을 사회주의 운동의 기초로 삼는 것을 선호하는 경향이 있습니다. 조합주의 점수가 높은 사람들은 조합과 다른 형태의 대중조직을 사회주의 운동의 기초로 삼는 것을 좋아합니다. 정당이라고 해서 반드시 조합에 반대한다는 의미는 아니며 그 반대 또한 마찬가지입니다.`
+        "ko": `<b style="color:#963B33;">정당</b> <b>vs.</b> <b style="color:#7F333B;">조합</b><br/> 정당주의 점수가 높은 사람들은 정당을 사회주의 운동의 기초로 삼는 것을 선호하는 경향이 있습니다. 조합주의 점수가 높은 사람들은 조합과 다른 형태의 대중조직을 사회주의 운동의 기초로 삼는 것을 좋아합니다. 정당이라고 해서 반드시 조합에 반대한다는 의미는 아니며 그 반대 또한 마찬가지입니다.`,
+        "es": "<b style='color:#963B33;'>Partido</b> <b>vs.</b> <b style='color:#7F333B;'>Unión</b><br/>" +
+        "Aquellos con una puntuación mayor de partido tienden a favorer el uso de partidos politicos como la base de movimientos socialistas. Aquellos con una puntuación mayor de unión tienden a favorar el uso de sindicatos y otras formas de organización dem asas como base para un movimiento socialista. Estar en favor de partido no significa necesariamente que estes en contra de uniones y viceversa, es mas sobre preferencia."
     },
     "index-prod-desc": {
         "en": "<b style='color:#804E00;'>Production</b> <b>vs.</b> <b style='color:#76890B;'>Nature</b><br/>" +
         "Those with a higher production score tend to prioritize industrial output and self-sustainability over ecological goals. Those with a higher nature score tend to support an environmentally oriented economy with strict ecological protections.",
         "de": "<b style='color:#804E00;'>Produktion</b> <b>vs.</b> <b style='color:#76890B;'>Ökologie</b><br/>" +
         "Diejenigen mit einem höheren Produktionsfaktor tendieren dazu, die Industrieproduktion und die Selbstverträglichkeit vor ökologischen Zielen zu priorisieren. Diejenigen mit einem höheren ökologischen Faktor tendieren dazu, eine umweltorientierte Wirtschaft mit strengen ökologischen Schutzmaßnahmen zu unterstützen.",
-        "ko": `<b style="color:#804E00;">생산</b> <b>vs.</b> <b style="color:#76890B;">생태</b><br/> 생산주의 점수가 높을 수록 생태학적 목표보다 산업 생산량과 산업의 지속가능성을 우선시하는 경향이 있습니다. 높은 생태주의 점수를 가진 사람들은 엄격한 생태 보호를 통한 환경 지향적 경제를 지지하는 경향이 있습니다.`
+        "ko": `<b style="color:#804E00;">생산</b> <b>vs.</b> <b style="color:#76890B;">생태</b><br/> 생산주의 점수가 높을 수록 생태학적 목표보다 산업 생산량과 산업의 지속가능성을 우선시하는 경향이 있습니다. 높은 생태주의 점수를 가진 사람들은 엄격한 생태 보호를 통한 환경 지향적 경제를 지지하는 경향이 있습니다.`,
+        "es": "<b style='color:#804E00;'>Producción</b> <b>vs.</b> <b style='color:#76890B;'>Naturaleza</b><br/>" +
+        "Aquellos con una puntuación mayor de producción tienden a priorizar la producción industrial y autosostenibilidad por encima de objetivos ecologicos. Aquellos con una puntuación mayor de naturaleza tienden a soportar una economía mas orientaada a la naturalzea con protecciones ecológicas estrictas."
     },
     "index-cons-desc": {
         "en": "<b style='color:#27577A;'>Conservative</b> <b>vs.</b> <b style='color:#C4A717;'>Progressive</b><br/>" +
         "Those with a higher conservative score tend to favor more socially conservative policies and views. Those with a higher progressive score tend to support more socially progressive policies and views.",
         "de": "<b style='color:#27577A;'>Konservativ</b> <b>vs.</b> <b style='color:#C4A717;'>Progressiv</b><br/>" +
         "Diejenigen mit einer höheren konservativen Bewertung tendieren dazu, sozial konservativere Strategien und Ansichten zu bevorzugen. Diejenigen mit einer höheren progressiven Punktzahl unterstützen tendenziell eine sozial progressivere Politik und Sichtweise.",
-        "ko": `<b style="color:#27577A;">보수</b> <b>vs.</b> <b style="color:#C4A717;">진보</b><br/> 보수주의 점수가 높은 사람들은 사회적으로 보수적인 정책과 견해를 선호하는 경향이 있습니다. 진보주의 점수가 높은 사람들은 사회적으로 진보적인 정책과 견해를 지지하는 경향이 있습니다.`
+        "ko": `<b style="color:#27577A;">보수</b> <b>vs.</b> <b style="color:#C4A717;">진보</b><br/> 보수주의 점수가 높은 사람들은 사회적으로 보수적인 정책과 견해를 선호하는 경향이 있습니다. 진보주의 점수가 높은 사람들은 사회적으로 진보적인 정책과 견해를 지지하는 경향이 있습니다.`,
+        "es": "<b style='color:#27577A;'>Conservativo</b> <b>vs.</b> <b style='color:#C4A717;'>Progressivo</b><br/>" +
+        "Aquellos con una puntuación mayor de conservativo tienden a soportar políticas y perspectivas mas socialmente conservatívas. Aquellos con una puntuación mayor de progressivo tienden a soportar políticas y perspectivas mas progressivas."
     },
     "index-h2-closest": {
         "en": "What does \"Closest Match\" mean in the results?",
         "de": "Was bedeutet \"Nächste Übereinstimmung\" in den Ergebnissen?",
-        "ko": `결과의 "가장 일치하는 성향"이 무엇을 의미합니까?`
+        "ko": `결과의 "가장 일치하는 성향"이 무엇을 의미합니까?`,
+        "es": "¿Que significa \"Resultado más cercano\" en los resultados?" 
     },
     "index-p-similar": {
         "en": "Similar to 8values, this quiz will attempt to match you with a specific leftist ideology. There are currently twelve possible ideologies, with more to come in the future. This is a work in progress and may not work as intended. Suggestions are very welcome. The current ideologies are: Marxism-Leninism, Orthodox Marxism, Eco-Marxism, Centrist Marxism, Council Communism, Left Communism, Anarcho-Communism, Eco-Anarchism, Market Anarchism, Utopian Socialism, Democratic Socialism and Social Democracy",
         "de": "Ähnlich wie bei 8values wird dieses Quiz versuchen, Sie mit einer bestimmten linken Ideologie in Einklang zu bringen. Derzeit gibt es zwölf mögliche Ideologien, von denen in Zukunft weitere folgen werden. Dies ist eine laufende Arbeit und funktioniert möglicherweise nicht wie beabsichtigt. Vorschläge sind sehr willkommen. Die gegenwärtigen Ideologien sind: Marxismus-Leninismus, orthodoxer Marxismus, Öko-Marxismus, zentristischer Marxismus, Kommunismus des Rates, Linkskommunismus, Anarcho-Kommunismus, Öko-Anarchismus, Marktanarchismus, utopischer Sozialismus, demokratischer Sozialismus und Sozialdemokratie",
-        "ko": "8Values와 비슷하게, 이 설문은 특정한 좌파 이념과 당신을 짝지으려 할 것입니다. 현재 12개의 가능한 이념이 있고, 미래에는 더 많은 이념들이 있을 수 있습니다. 이는 진행중인 작업이며, 의도한대로 작동하지 않을 수도 있습니다. 제안은 언제나 환영합니다. 현재 준비된 이념은 마르크스-레닌주의, 정통 마르크스주의, 생태-마르크스주의, 중도 마르크스주의, 평의회 공산주의, 좌익 공산주의, 아나코-코뮤니즘, 생태-아나키즘, 시장 아나키즘, 공상적 사회주의, 민주사회주의, 사회민주주의 등이 있습니다."
+        "ko": "8Values와 비슷하게, 이 설문은 특정한 좌파 이념과 당신을 짝지으려 할 것입니다. 현재 12개의 가능한 이념이 있고, 미래에는 더 많은 이념들이 있을 수 있습니다. 이는 진행중인 작업이며, 의도한대로 작동하지 않을 수도 있습니다. 제안은 언제나 환영합니다. 현재 준비된 이념은 마르크스-레닌주의, 정통 마르크스주의, 생태-마르크스주의, 중도 마르크스주의, 평의회 공산주의, 좌익 공산주의, 아나코-코뮤니즘, 생태-아나키즘, 시장 아나키즘, 공상적 사회주의, 민주사회주의, 사회민주주의 등이 있습니다.",
+        "es": "similar a 8Values, este enlace va a intentar a unirte con una ideología específica de izquierda. Ahora mismo hay doce posibles ideologías, con más en el futuro. Este trabajo esta en obra y puede ser que no funcione como deseado. Las suggerencias son muy bienvenidas. Las ideologías actuales son: Marxismo-Leninismo, Marxismo ortodoxo, Eco-Marxismo, Marxismo centrista, Comunismo de Concejos, Comunismo Izquierdo, Anarco-Comunismo, Eco-Anarquísmo. Anarquísmo de Mercado, Socialismo Utópico, Socialismo Democratico y Democracia Social
     },
     "index-h2-scores": {
         "en": "I don't like my scores!",
@@ -284,17 +338,20 @@ const i18n = {
     "index-p-scores": {
         "en": "Please remember that you are not intended to get a 100% score in any of the categories. The point of the quiz is to challenge your views. If you have any suggestions or constructive criticism please fill out this <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>short form</a> or open an issue on the <a href='https://github.com/LeftValues/leftvalues.github.io'>GitHub Page</a>.",
         "de": "Bitte denken Sie daran, dass Sie in keiner der Kategorien eine 100%-ige Punktzahl erzielen möchten. Ziel des Quiz ist es, Ihre Ansichten zu hinterfragen. Wenn Sie Anregungen oder konstruktive Kritik haben, füllen Sie bitte dieses <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>Kurzformular</a> aus oder öffnen Sie ein Problem auf der <a href='https://github.com/LeftValues/leftvalues.github.io'>GitHub-Seite</a>.",
-        "ko": `어떠한 범주에서든 100%의 점수를 얻을 수 없다는 것을 기억하십시오. 이 설문의 목적은 당신 자신의 관점에 직면하는 것에 있습니다. 의견이나 건설적인 비판은 <a href="https://forms.gle/6WZYMb5GXkkDLhxr5">이 양식</a>이나 <a href="https://github.com/LeftValues/leftvalues.github.io">GitHub Page</a>의 이슈를 통해 개진할 수 있습니다.`
+        "ko": `어떠한 범주에서든 100%의 점수를 얻을 수 없다는 것을 기억하십시오. 이 설문의 목적은 당신 자신의 관점에 직면하는 것에 있습니다. 의견이나 건설적인 비판은 <a href="https://forms.gle/6WZYMb5GXkkDLhxr5">이 양식</a>이나 <a href="https://github.com/LeftValues/leftvalues.github.io">GitHub Page</a>의 이슈를 통해 개진할 수 있습니다.`,
+        "es": "Aquerdence de que no es intencionado de que consigas un 100% en ninguna de las categorías. El objetivo de la enquesta es desafiar tu perspectiva. Si tienes algunas sugerencias o criticismo constructivo, por favor rellenen esta <a href='https://forms.gle/6WZYMb5GXkkDLhxr5'>pequeña encuesta</a> o abran un asunto en la <a href='https://github.com/LeftValues/leftvalues.github.io'>Pagina de Github</a>."
     },
     "index-h2-tracked": {
         "en": "Am I being tracked?",
         "de": "Werde ich getracked?",
-        "ko": "제가 추적되고 있습니까?"
+        "ko": "제가 추적되고 있습니까?",
+        "es": "¿Estoy siendo rastreado?"
     },
     "index-p-tracked": {
         "en": "LeftValues does utilize very basic tracking to get an idea of the amount of visitors. No personal information is collected and answers/results are not saved. If you do not believe me, the code is open source and available for all to see. For transparency purposes, the collected data for the first week since release can be viewed on this <a href='https://docs.google.com/document/d/1pcnZdMkEmGXgLMS8izvqd_JEcgjuFgUnfqCRO32q2go/edit?usp=sharing'>Google Document</a>.",
         "de": "LeftValues verwendet ein sehr einfaches Tracking, um sich einen Überblick über die Anzahl der Besucher zu verschaffen. Es werden keine persönlichen Informationen gesammelt und Antworten/Ergebnisse werden nicht gespeichert. Wenn Sie mir nicht glauben, ist der Code Open Source und für alle sichtbar.",
-        "ko": `LeftValues는 방문자 수를 파악하기 위해 매우 기본적인 추적 기능을 사용하고 있습니다. 개인 정보는 수집되지 않으며 응답과 결과는 저장되지 않습니다. 이 서비스를 위해 사용한 코드는 모든 사람들에게 오픈되어 있으므로 만일 당신이 우릴 믿지 못하겠다면 살펴볼 수 있습니다. 우리가 수집하는 정보의 투명성을 위해 이 서비스가 오픈된 지 첫 주동안 수집된 데이터를 <a href="https://docs.google.com/document/d/1pcnZdMkEmGXgLMS8izvqd_JEcgjuFgUnfqCRO32q2go/edit?usp=sharing">Google Document</a>에 공개해두었습니다.`
+        "ko": `LeftValues는 방문자 수를 파악하기 위해 매우 기본적인 추적 기능을 사용하고 있습니다. 개인 정보는 수집되지 않으며 응답과 결과는 저장되지 않습니다. 이 서비스를 위해 사용한 코드는 모든 사람들에게 오픈되어 있으므로 만일 당신이 우릴 믿지 못하겠다면 살펴볼 수 있습니다. 우리가 수집하는 정보의 투명성을 위해 이 서비스가 오픈된 지 첫 주동안 수집된 데이터를 <a href="https://docs.google.com/document/d/1pcnZdMkEmGXgLMS8izvqd_JEcgjuFgUnfqCRO32q2go/edit?usp=sharing">Google Document</a>에 공개해두었습니다.`,
+        "es": "LeftValues utiliza rastreamiento muy basico para consequir una idea sobre la cantidad de visitantes. Ninguna información personal es colleccionada y los resultados no son guardados. Si no nos creen, el código es código abierto y disponible para que todos los vean. Por razones de transparencia, los datos colleccionados desde la primera semana desde la estrena pueden ser vistos en este <a href='https://docs.google.com/document/d/1pcnZdMkEmGXgLMS8izvqd_JEcgjuFgUnfqCRO32q2go/edit?usp=sharing'>Documento de Google</a>."
     }
 }
 
